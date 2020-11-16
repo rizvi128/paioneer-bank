@@ -82,7 +82,7 @@
 //login btm event handler
     const loginBtn = document.getElementById("login");
     loginBtn.addEventListener('click', function(){
-        const loginArea = document.getElementById("login-area")
+    const loginArea = document.getElementById("login-area")
     loginArea.style.display = "none"
     const transectionArea = document.getElementById('transection-area');
     transectionArea.style.display = "block"
@@ -94,52 +94,33 @@
 
     const depositBtn = document.getElementById('addDeposit');
     depositBtn.addEventListener('click', function(){
-        const depositNumber = getInputNumber('depositAmount');
+    const depositNumber = getInputNumber('depositAmount');
 //deposit and balance similer function
-updateSpanText('currentDeposit', depositNumber);
- updateSpanText('currentBalance', depositNumber);
+    updateSpanText('currentDeposit', depositNumber);
+    updateSpanText('currentBalance', depositNumber);
 
-     document.getElementById('depositAmount').value = "";
-
-     
-
+    document.getElementById('depositAmount').value = "";
     })
 
 //withdraw btn handler
-const withDrawBtn = document.getElementById('addWithdraw');
-      withDrawBtn.addEventListener("click", function(){
-          const withdrawNumber = getInputNumber("withdrawAmount");
-          
-
-      })
+     const withDrawBtn = document.getElementById('addWithdraw');
+     withDrawBtn.addEventListener("click", function(){
+     const withdrawNumber = getInputNumber("withdrawAmount");
+     })
+      
       function getInputNumber(id){
-        const Amount = document.getElementById(id).value;
-          const amountNumber = parseFloat(Amount);
-          return amountNumber;
-
+      const Amount = document.getElementById(id).value;
+      const amountNumber = parseFloat(Amount);
+      return amountNumber;
       }
- 
 
-
-function updateSpanText(id, depositNumber){
+       function updateSpanText(id, depositNumber){
     
-    const current = document.getElementById(id).innerText;
-     const currentNumber = parseFloat(current);
-     const total = depositNumber + currentNumber;
-     document.getElementById(id).innerText = total;
-
-}
-
- 
-
-
-
-
-
-
-
-
-
+       const current = document.getElementById(id).innerText;
+       const currentNumber = parseFloat(current);
+       const total = depositNumber + currentNumber;
+       document.getElementById(id).innerText = total;
+       }
 </script>
 </body>
 </html>
